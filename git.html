@@ -1,0 +1,137 @@
+<html>
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/600753 (zh-CN, DDL); Windows/10.0.0 (Win64);"/>
+  <meta name="content-class" content="yinxiang.markdown"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="8356"/>
+
+<div><span><div style="font-size: 14px; margin: 0; padding: 0; width: 100%;"><h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">Git介绍</h5>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">版本控制：记录文本内容的变化</p>
+</li>
+<li style="line-height: 160%; box-sizing: content-box;">
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">版本管理软件：<strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">分布式</strong>：所有节点通过远程仓库来协同工作</p>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">*  集中式</p>
+</li>
+</ol>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">Git使用</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">mkdir 创建目录（文件夹） mkdir 目录1<br/>
+cd      进入目录   cd   目录1<br/>
+cd..     返回上一级目录<br/>
+ls       查看目录<br/>
+ls -a    查看目录以及<strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">隐藏目录</strong><br/>
+touch  新建文件 touch 文件1 文件2<br/>
+rm      删除文件<br/>
+clear    清空屏幕<br/>
+cat      查看文件内容<br/>
+less     查看文件，但是需要按q退出<br/>
+上下方向键    切换历史命令<br/>
+tab键           补全命令</p>
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">创建文件并进入编辑模式</h6>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">1.vi   文件名（进入要修改的文件 ）<br/>
+2.i    进入插入编辑模式<br/>
+3.esc  退出编辑模式<br/>
+4.:q        退出编辑不保存<br/>
+:wq      保存并退出<br/>
+:q!       强制退出不保存</p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">基本Git工作流程</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">新建仓库/目录<br/>
+git init //git初始化（initialized 初始化   |  repository 仓库）<br/>
+giti add<br/>
+git commit -m &quot;代码修改说明&quot;<br/>
+git log 查看每次提交内容的命令<br/>
+git log --oneline(在一行显示)<br/>
+git reset --hard summit 上一条命令里面的commit后面的值复制一下</p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">git status//git状态<br/>
+untracked//未跟踪的，也就是说没有被git管理<br/>
+git add 需要被管理的文件，将在工作区的文件放入暂存区（从未跟踪到已跟踪状态，放在暂存区）<br/>
+git add . 添加除隐藏的git文件夹，剩下的都添加进去<br/>
+git commit -m &quot;代码修改的备注信息&quot;----提交到git仓库<br/>
+<img src="git_files/Image.png" type="image/png" data-filename="Image.png"/><br/>
+work tree clean代表的是暂存区空<br/>
+<img src="git_files/Image [1].png" type="image/png" data-filename="Image.png"/></p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h4 style="line-height: 160%; box-sizing: content-box; font-size: 20px; color: #333;">撤销修改</h4>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">从工作区还原</h5>
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">放弃指定文件的修改</h6>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">git checkout -- 想要变回原来内容的文件名</p>
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">放弃所有文件的修改</h6>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">git checkout .</p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">放弃暂存区的修改</h5>
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">对单个文件</h6>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">git reset HEAD yourfilename.ext<br/>
+git checkout --yourfilename.ext</p>
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">对所有文件</h6>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">git reset HEAD<br/>
+git checkout .<br/>
+<img src="git_files/Image [2].png" type="image/png" data-filename="Image.png"/></p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">回滚整个版本<br/>
+<img src="git_files/Image [3].png" type="image/png" data-filename="Image.png"/></p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">建立git库</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">建立一个新的文件夹 启动git bash<br/>
+git init//初始化，显示<br/>
+Initialized empty Git repository in D:/黑马学习资料/9.git/ld/.git/<br/>
+即在ld文件夹下建立git库成功，可以使用ls -a查看一下文件夹下面所有的文件<br/>
+<img src="git_files/Image [4].png" type="image/png" data-filename="Image.png"/><br/>
+ls命令用来列出当前目录下的文件及文件夹</p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">cd命令</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="git_files/Image [5].png" type="image/png" data-filename="Image.png"/></p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">掌握方向上下键</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">方向上下键调历史命令</p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">tab键补全代码</h5>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">查看git仓库的状态</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="git_files/Image [6].png" type="image/png" data-filename="Image.png"/><br/>
+未跟踪状态<br/>
+<img src="git_files/Image [7].png" type="image/png" data-filename="Image.png"/><br/>
+把未跟踪的文件添加到仓库中<br/>
+<img src="git_files/Image [8].png" type="image/png" data-filename="Image.png"/></p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">git log查看提交记录</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="git_files/Image [9].png" type="image/png" data-filename="Image.png"/></p>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">提交修改</h5>
+<ol style="line-height: 160%; box-sizing: content-box; display: block; padding-left: 30px; margin: 6px 0 10px; color: #333; list-style-type: decimal;">
+<li style="line-height: 160%; box-sizing: content-box;">添加到暂存区（git add）</li>
+<li style="line-height: 160%; box-sizing: content-box;">提交修改（git commit）</li>
+</ol>
+<hr style="line-height: 160%; box-sizing: content-box; border-top: 1px solid #eee; margin: 16px 0;"/>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">使用git撤销操作，切换想要到达的状态</h5>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">放弃在工作区的修改</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">只在工作区（VScode当中修改了内容），想要撤销操作<br/>
+<strong style="line-height: 160%; box-sizing: content-box; font-weight: 700;">git checkout index.html(想要撤销的文件名)</strong></p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">放弃在暂存区的修改</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;">第一次提交过后，对工作区的内容进行了修改，并且还进行了add操作，此时想要撤销这个操作使用<br/>
+git reset HEAD index.html<br/>
+git checkout index.html<br/>
+<img src="git_files/Image [10].png" type="image/png" data-filename="Image.png"/></p>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">放弃在仓库中的修改</h5>
+<h5 style="line-height: 160%; box-sizing: content-box; font-weight: 700; font-size: 16px; color: #333;">删除文件</h5>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="git_files/Image [11].png" type="image/png" data-filename="Image.png"/><br/>
+<img src="git_files/Image [12].png" type="image/png" data-filename="Image.png"/></p>
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">分支：</h6>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="git_files/Image [13].png" type="image/png" data-filename="Image.png"/></p>
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">新建分支</h6>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="git_files/Image [14].png" type="image/png" data-filename="Image.png"/><br/>
+<img src="git_files/Image [15].png" type="image/png" data-filename="Image.png"/></p>
+<h6 style="line-height: 160%; box-sizing: content-box; font-size: 13px; color: #333;">git-clone远程仓库</h6>
+<p style="line-height: 160%; box-sizing: content-box; margin: 10px 0; color: #333;"><img src="git_files/Image [16].png" type="image/png" data-filename="Image.png"/><br/>
+<img src="git_files/Image [17].png" type="image/png" data-filename="Image.png"/></p>
+</div><center style="display:none !important;visibility:collapse !important;height:0 !important;white-space:nowrap;width:100%;overflow:hidden">%23%23%23%23%23%20Git%E4%BB%8B%E7%BB%8D%0A%0A1.%20%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%EF%BC%9A%E8%AE%B0%E5%BD%95%E6%96%87%E6%9C%AC%E5%86%85%E5%AE%B9%E7%9A%84%E5%8F%98%E5%8C%96%0A2.%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6%EF%BC%9A**%E5%88%86%E5%B8%83%E5%BC%8F**%EF%BC%9A%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9%E9%80%9A%E8%BF%87%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E6%9D%A5%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20*%20%20%E9%9B%86%E4%B8%AD%E5%BC%8F%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%23%23%23%23%23%20%20%20%20Git%E4%BD%BF%E7%94%A8%0A%20%20%20mkdir%20%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95%EF%BC%88%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%89%20mkdir%20%E7%9B%AE%E5%BD%951%0A%20%20%20cd%20%20%20%20%20%20%E8%BF%9B%E5%85%A5%E7%9B%AE%E5%BD%95%20%20%20cd%20%20%20%E7%9B%AE%E5%BD%951%20%20%0A%20%20%20cd..%20%20%20%20%20%E8%BF%94%E5%9B%9E%E4%B8%8A%E4%B8%80%E7%BA%A7%E7%9B%AE%E5%BD%95%0A%20%20%20ls%20%20%20%20%20%20%20%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%0A%20%20%20ls%20-a%20%20%20%20%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%E4%BB%A5%E5%8F%8A**%E9%9A%90%E8%97%8F%E7%9B%AE%E5%BD%95**%0A%20%20%20touch%20%20%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%20touch%20%E6%96%87%E4%BB%B61%20%E6%96%87%E4%BB%B62%20%0A%20%20%20rm%20%20%20%20%20%20%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%0A%20%20%20clear%20%20%20%20%E6%B8%85%E7%A9%BA%E5%B1%8F%E5%B9%95%0A%20%20%20cat%20%20%20%20%20%20%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%0A%20%20%20less%20%20%20%20%20%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%EF%BC%8C%E4%BD%86%E6%98%AF%E9%9C%80%E8%A6%81%E6%8C%89q%E9%80%80%E5%87%BA%0A%20%20%20%E4%B8%8A%E4%B8%8B%E6%96%B9%E5%90%91%E9%94%AE%20%20%20%20%E5%88%87%E6%8D%A2%E5%8E%86%E5%8F%B2%E5%91%BD%E4%BB%A4%0A%20%20%20tab%E9%94%AE%20%20%20%20%20%20%20%20%20%20%20%E8%A1%A5%E5%85%A8%E5%91%BD%E4%BB%A4%0A%20%20%20%0A%23%23%23%23%23%23%20%20%20%20%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6%E5%B9%B6%E8%BF%9B%E5%85%A5%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%0A%0A%20%20%201.vi%20%20%20%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%88%E8%BF%9B%E5%85%A5%E8%A6%81%E4%BF%AE%E6%94%B9%E7%9A%84%E6%96%87%E4%BB%B6%20%EF%BC%89%0A%20%20%202.i%20%20%20%20%E8%BF%9B%E5%85%A5%E6%8F%92%E5%85%A5%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%0A%20%20%203.esc%20%20%E9%80%80%E5%87%BA%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%0A%20%20%204.%3Aq%20%20%20%20%20%20%20%20%E9%80%80%E5%87%BA%E7%BC%96%E8%BE%91%E4%B8%8D%E4%BF%9D%E5%AD%98%0A%20%20%20%20%20%3Awq%20%20%20%20%20%20%E4%BF%9D%E5%AD%98%E5%B9%B6%E9%80%80%E5%87%BA%0A%20%20%20%20%20%3Aq!%20%20%20%20%20%20%20%E5%BC%BA%E5%88%B6%E9%80%80%E5%87%BA%E4%B8%8D%E4%BF%9D%E5%AD%98%0A%20%20%20%0A%0A*%20*%20*%0A%23%23%23%23%23%20%E5%9F%BA%E6%9C%ACGit%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%0A%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%2F%E7%9B%AE%E5%BD%95%0Agit%20init%20%2F%2Fgit%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%88initialized%20%E5%88%9D%E5%A7%8B%E5%8C%96%20%20%20%7C%20%20repository%20%E4%BB%93%E5%BA%93%EF%BC%89%0Agiti%20add%20%0Agit%20commit%20-m%20%22%E4%BB%A3%E7%A0%81%E4%BF%AE%E6%94%B9%E8%AF%B4%E6%98%8E%22%0Agit%20log%20%E6%9F%A5%E7%9C%8B%E6%AF%8F%E6%AC%A1%E6%8F%90%E4%BA%A4%E5%86%85%E5%AE%B9%E7%9A%84%E5%91%BD%E4%BB%A4%0Agit%20log%20--oneline(%E5%9C%A8%E4%B8%80%E8%A1%8C%E6%98%BE%E7%A4%BA)%0Agit%20reset%20--hard%20summit%20%E4%B8%8A%E4%B8%80%E6%9D%A1%E5%91%BD%E4%BB%A4%E9%87%8C%E9%9D%A2%E7%9A%84commit%E5%90%8E%E9%9D%A2%E7%9A%84%E5%80%BC%E5%A4%8D%E5%88%B6%E4%B8%80%E4%B8%8B%0A%0A*%20*%20*%0Agit%20status%2F%2Fgit%E7%8A%B6%E6%80%81%0Auntracked%2F%2F%E6%9C%AA%E8%B7%9F%E8%B8%AA%E7%9A%84%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%E6%B2%A1%E6%9C%89%E8%A2%ABgit%E7%AE%A1%E7%90%86%0Agit%20add%20%E9%9C%80%E8%A6%81%E8%A2%AB%E7%AE%A1%E7%90%86%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%8C%E5%B0%86%E5%9C%A8%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%9A%84%E6%96%87%E4%BB%B6%E6%94%BE%E5%85%A5%E6%9A%82%E5%AD%98%E5%8C%BA%EF%BC%88%E4%BB%8E%E6%9C%AA%E8%B7%9F%E8%B8%AA%E5%88%B0%E5%B7%B2%E8%B7%9F%E8%B8%AA%E7%8A%B6%E6%80%81%EF%BC%8C%E6%94%BE%E5%9C%A8%E6%9A%82%E5%AD%98%E5%8C%BA%EF%BC%89%0Agit%20add%20.%20%E6%B7%BB%E5%8A%A0%E9%99%A4%E9%9A%90%E8%97%8F%E7%9A%84git%E6%96%87%E4%BB%B6%E5%A4%B9%EF%BC%8C%E5%89%A9%E4%B8%8B%E7%9A%84%E9%83%BD%E6%B7%BB%E5%8A%A0%E8%BF%9B%E5%8E%BB%0Agit%20commit%20-m%20%22%E4%BB%A3%E7%A0%81%E4%BF%AE%E6%94%B9%E7%9A%84%E5%A4%87%E6%B3%A8%E4%BF%A1%E6%81%AF%22----%E6%8F%90%E4%BA%A4%E5%88%B0git%E4%BB%93%E5%BA%93%0A!%5B68702ef96410ad109a48033a87836e32.png%5D(en-resource%3A%2F%2Fdatabase%2F8358%3A1)%0Awork%20tree%20clean%E4%BB%A3%E8%A1%A8%E7%9A%84%E6%98%AF%E6%9A%82%E5%AD%98%E5%8C%BA%E7%A9%BA%0A!%5B181e7035c75095da5cb7d767222ab538.png%5D(en-resource%3A%2F%2Fdatabase%2F8360%3A1)%0A%0A*%20*%20*%0A%23%23%23%23%20%E6%92%A4%E9%94%80%E4%BF%AE%E6%94%B9%0A%0A*%20*%20*%0A%0A%23%23%23%23%23%20%E4%BB%8E%E5%B7%A5%E4%BD%9C%E5%8C%BA%E8%BF%98%E5%8E%9F%0A%23%23%23%23%23%23%20%E6%94%BE%E5%BC%83%E6%8C%87%E5%AE%9A%E6%96%87%E4%BB%B6%E7%9A%84%E4%BF%AE%E6%94%B9%0Agit%20checkout%20--%20%E6%83%B3%E8%A6%81%E5%8F%98%E5%9B%9E%E5%8E%9F%E6%9D%A5%E5%86%85%E5%AE%B9%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8D%0A%23%23%23%23%23%23%20%E6%94%BE%E5%BC%83%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%E7%9A%84%E4%BF%AE%E6%94%B9%0Agit%20checkout%20.%0A%0A*%20*%20*%0A%23%23%23%23%23%20%E6%94%BE%E5%BC%83%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E4%BF%AE%E6%94%B9%0A%23%23%23%23%23%23%20%E5%AF%B9%E5%8D%95%E4%B8%AA%E6%96%87%E4%BB%B6%20%0Agit%20reset%20HEAD%20yourfilename.ext%0Agit%20checkout%20--yourfilename.ext%0A%23%23%23%23%23%23%20%E5%AF%B9%E6%89%80%E6%9C%89%E6%96%87%E4%BB%B6%0Agit%20reset%20HEAD%0Agit%20checkout%20.%0A!%5Bd6518dd8c425285b9d587fefd2181ce6.png%5D(en-resource%3A%2F%2Fdatabase%2F8362%3A1)%0A%0A*%20*%20*%0A%E5%9B%9E%E6%BB%9A%E6%95%B4%E4%B8%AA%E7%89%88%E6%9C%AC%0A!%5Be00c831381eb2d7fac518a0882a78c72.png%5D(en-resource%3A%2F%2Fdatabase%2F8366%3A1)%0A%0A%0A*%20*%20*%0A%23%23%23%23%23%20%E5%BB%BA%E7%AB%8Bgit%E5%BA%93%0A%E5%BB%BA%E7%AB%8B%E4%B8%80%E4%B8%AA%E6%96%B0%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9%20%E5%90%AF%E5%8A%A8git%20bash%0Agit%20init%2F%2F%E5%88%9D%E5%A7%8B%E5%8C%96%EF%BC%8C%E6%98%BE%E7%A4%BA%0AInitialized%20empty%20Git%20repository%20in%20D%3A%2F%E9%BB%91%E9%A9%AC%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99%2F9.git%2Fld%2F.git%2F%0A%E5%8D%B3%E5%9C%A8ld%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E5%BB%BA%E7%AB%8Bgit%E5%BA%93%E6%88%90%E5%8A%9F%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8ls%20-a%E6%9F%A5%E7%9C%8B%E4%B8%80%E4%B8%8B%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E9%9D%A2%E6%89%80%E6%9C%89%E7%9A%84%E6%96%87%E4%BB%B6%0A!%5B1e95927ef08996aa73490a8a76525bd6.png%5D(en-resource%3A%2F%2Fdatabase%2F8368%3A1)%0Als%E5%91%BD%E4%BB%A4%E7%94%A8%E6%9D%A5%E5%88%97%E5%87%BA%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E5%8F%8A%E6%96%87%E4%BB%B6%E5%A4%B9%0A%23%23%23%23%23%20cd%E5%91%BD%E4%BB%A4%0A!%5B80dae2c7c293247eb328ef762b82c86d.png%5D(en-resource%3A%2F%2Fdatabase%2F8370%3A1)%0A%23%23%23%23%23%20%E6%8E%8C%E6%8F%A1%E6%96%B9%E5%90%91%E4%B8%8A%E4%B8%8B%E9%94%AE%0A%E6%96%B9%E5%90%91%E4%B8%8A%E4%B8%8B%E9%94%AE%E8%B0%83%E5%8E%86%E5%8F%B2%E5%91%BD%E4%BB%A4%0A%23%23%23%23%23%20tab%E9%94%AE%E8%A1%A5%E5%85%A8%E4%BB%A3%E7%A0%81%0A%23%23%23%23%23%20%E6%9F%A5%E7%9C%8Bgit%E4%BB%93%E5%BA%93%E7%9A%84%E7%8A%B6%E6%80%81%0A!%5B64102ee2aace3e1e31083cdfbd7d19b1.png%5D(en-resource%3A%2F%2Fdatabase%2F8372%3A1)%0A%E6%9C%AA%E8%B7%9F%E8%B8%AA%E7%8A%B6%E6%80%81%0A!%5Bae773632cae54691c9911275e082c0d6.png%5D(en-resource%3A%2F%2Fdatabase%2F8374%3A1)%0A%E6%8A%8A%E6%9C%AA%E8%B7%9F%E8%B8%AA%E7%9A%84%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E4%BB%93%E5%BA%93%E4%B8%AD%0A!%5Bad111a32f90cd78f49910e1cf62b3048.png%5D(en-resource%3A%2F%2Fdatabase%2F8376%3A1)%0A%0A*%20*%20*%0A%23%23%23%23%23%20git%20log%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E8%AE%B0%E5%BD%95%0A!%5B068301740caf60b7a562f8f26c9deb71.png%5D(en-resource%3A%2F%2Fdatabase%2F8378%3A1)%0A%0A*%20*%20*%0A%23%23%23%23%23%20%E6%8F%90%E4%BA%A4%E4%BF%AE%E6%94%B9%0A%0A1.%20%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA%EF%BC%88git%20add%EF%BC%89%0A2.%20%E6%8F%90%E4%BA%A4%E4%BF%AE%E6%94%B9%EF%BC%88git%20commit%EF%BC%89%0A%0A*%20*%20*%0A%23%23%23%23%23%20%E4%BD%BF%E7%94%A8git%E6%92%A4%E9%94%80%E6%93%8D%E4%BD%9C%EF%BC%8C%E5%88%87%E6%8D%A2%E6%83%B3%E8%A6%81%E5%88%B0%E8%BE%BE%E7%9A%84%E7%8A%B6%E6%80%81%0A%23%23%23%23%23%20%E6%94%BE%E5%BC%83%E5%9C%A8%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%9A%84%E4%BF%AE%E6%94%B9%0A%E5%8F%AA%E5%9C%A8%E5%B7%A5%E4%BD%9C%E5%8C%BA%EF%BC%88VScode%E5%BD%93%E4%B8%AD%E4%BF%AE%E6%94%B9%E4%BA%86%E5%86%85%E5%AE%B9%EF%BC%89%EF%BC%8C%E6%83%B3%E8%A6%81%E6%92%A4%E9%94%80%E6%93%8D%E4%BD%9C%0A**git%20checkout%20index.html(%E6%83%B3%E8%A6%81%E6%92%A4%E9%94%80%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8D)**%0A%23%23%23%23%23%20%E6%94%BE%E5%BC%83%E5%9C%A8%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E4%BF%AE%E6%94%B9%0A%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%8F%90%E4%BA%A4%E8%BF%87%E5%90%8E%EF%BC%8C%E5%AF%B9%E5%B7%A5%E4%BD%9C%E5%8C%BA%E7%9A%84%E5%86%85%E5%AE%B9%E8%BF%9B%E8%A1%8C%E4%BA%86%E4%BF%AE%E6%94%B9%EF%BC%8C%E5%B9%B6%E4%B8%94%E8%BF%98%E8%BF%9B%E8%A1%8C%E4%BA%86add%E6%93%8D%E4%BD%9C%EF%BC%8C%E6%AD%A4%E6%97%B6%E6%83%B3%E8%A6%81%E6%92%A4%E9%94%80%E8%BF%99%E4%B8%AA%E6%93%8D%E4%BD%9C%E4%BD%BF%E7%94%A8%0Agit%20reset%20HEAD%20index.html%0Agit%20checkout%20index.html%0A!%5B9f642c53ddf4b854c7f5d1488c9f72b5.png%5D(en-resource%3A%2F%2Fdatabase%2F8380%3A1)%0A%23%23%23%23%23%20%E6%94%BE%E5%BC%83%E5%9C%A8%E4%BB%93%E5%BA%93%E4%B8%AD%E7%9A%84%E4%BF%AE%E6%94%B9%0A%23%23%23%23%23%20%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%0A!%5Bca8e95a926c82527fdd4f1142a02e204.png%5D(en-resource%3A%2F%2Fdatabase%2F8382%3A1)%0A!%5B46d5a07cc63995ab88d6f25d27b4c538.png%5D(en-resource%3A%2F%2Fdatabase%2F8384%3A1)%0A%23%23%23%23%23%23%20%E5%88%86%E6%94%AF%EF%BC%9A%0A!%5B9bf7fbd91c92142cfd0cfc6e1fdd3161.png%5D(en-resource%3A%2F%2Fdatabase%2F8386%3A1)%0A%23%23%23%23%23%23%20%E6%96%B0%E5%BB%BA%E5%88%86%E6%94%AF%0A!%5B7df74571d3f0f72cb885c9b4a4edfff0.png%5D(en-resource%3A%2F%2Fdatabase%2F8388%3A0)%0A!%5B752e68678903e69f2835f7332211610d.png%5D(en-resource%3A%2F%2Fdatabase%2F8390%3A0)%0A%23%23%23%23%23%23%20git-clone%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%0A!%5Bdd988b3b967a62fada690d4db4a05463.png%5D(en-resource%3A%2F%2Fdatabase%2F8392%3A0)%0A!%5B1ac5d8a3419b1b1612b5d34a4336521b.png%5D(en-resource%3A%2F%2Fdatabase%2F8394%3A0)%0A</center></span>
+</div></body></html> 
